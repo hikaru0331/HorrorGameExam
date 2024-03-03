@@ -58,7 +58,7 @@ namespace StarterAssets
 		private float _speed;
 		private float _rotationVelocity;
 		private float _verticalVelocity;
-		private float _terminalVelocity = 53.0f;
+		//private float _terminalVelocity = 53.0f;
 
 		// timeout deltatime
 		private float _jumpTimeoutDelta;
@@ -112,7 +112,7 @@ namespace StarterAssets
 
 		private void Update()
 		{
-			JumpAndGravity();
+			//JumpAndGravity();
 			GroundedCheck();
 			Move();
 		}
@@ -198,7 +198,7 @@ namespace StarterAssets
 			_controller.Move(inputDirection.normalized * (_speed * Time.deltaTime) + new Vector3(0.0f, _verticalVelocity, 0.0f) * Time.deltaTime);
 		}
 
-		private void JumpAndGravity()
+		/*private void JumpAndGravity()
 		{
 			if (Grounded)
 			{
@@ -244,7 +244,7 @@ namespace StarterAssets
 			{
 				_verticalVelocity += Gravity * Time.deltaTime;
 			}
-		}
+		}*/
 
 		private static float ClampAngle(float lfAngle, float lfMin, float lfMax)
 		{
