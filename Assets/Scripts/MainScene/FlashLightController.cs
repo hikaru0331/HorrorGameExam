@@ -11,7 +11,7 @@ public class FlashLightController : MonoBehaviour
     private void Start() 
     {
         lightComponent = this.GetComponent<Light>();
-        SetLightBrightness(30f);
+        SetLightBrightness(GradeCalculater.lightSpotAngle);
     }
 
     public void SetLightBrightness(float spotAngle)
