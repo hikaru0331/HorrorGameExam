@@ -3,22 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 class SearchTimes
 {
-  //値オブジェクトのプロパティはprivateで不変にする。
-  private readonly int time;
-  
-  SearchTimes(int time) 
+  private int searchTimes;
+  private const int MIN_TIMES = 0;
+  private const int MAX_TIMES = 10;
+    
+  public int GetSearchTimes() 
   {
-    //timeが0以下になる時は、0で固定にする。
-    if(time < 0) time = 0;
-    this.time = time;
-  }
-  
-  public int getValue() {
-    return time;
+    return searchTimes;
   }
 
-  public SearchTimes addTime(int addValue) {
-    //値を変更する時は、新しいインスタンスを生成する。
-    return new SearchTimes(time + addValue);
+  public void AddSearchTimes(int addValue) 
+  {
+    this.searchTimes = Mathf.Clamp(searchTimes + addValue, MIN_TIMES, MAX_TIMES);
   }
 }
