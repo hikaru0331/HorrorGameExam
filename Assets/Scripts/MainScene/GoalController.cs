@@ -16,6 +16,7 @@ public class GoalController : SelectRayOutline
         if(Input.GetMouseButtonDown(0))
         {
             SceneManager.LoadScene("Result");
+            Cursor.visible = true;
         }
     }
 }
