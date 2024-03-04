@@ -6,10 +6,11 @@ class SearchTimes
   //値オブジェクトのプロパティはprivateで不変にする。
   private readonly int time;
   
-  SearchTimes(int time) {
+  SearchTimes(int time) 
+  {
     //timeが0以下になる時は、0で固定にする。
     if(time < 0) time = 0;
-    this.time = time
+    this.time = time;
   }
   
   public int getValue() {
