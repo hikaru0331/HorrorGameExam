@@ -16,4 +16,9 @@ class SearchTimes
   {
     this.searchTimes = Mathf.Clamp(searchTimes + addValue, MIN_TIMES, MAX_TIMES);
   }
+
+  public void ResetSearchTimes()
+  {
+    searchTimes = MIN_TIMES;
+  }
 }

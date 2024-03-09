@@ -1,29 +1,29 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class LoadMainScene : MonoBehaviour
+public class TitleSceneManager : MonoBehaviour
 {
     [SerializeField] private Button startButton;
     [SerializeField] private Button optionButton;
     [SerializeField] private Button exitButton;
 
+    [SerializeField] private GameObject selectLightPanel;
     [SerializeField] private GameObject optionPanel;
     
 
     // Start is called before the first frame update
     void Start()
     {
-        startButton.onClick.AddListener(LoadMain);
+        startButton.onClick.AddListener(OpenSelectLightPanel);
         optionButton.onClick.AddListener(OpenOptionPanel);
         exitButton.onClick.AddListener(ExitGame);
     }
 
-    private void LoadMain()
+    private void OpenSelectLightPanel()
     {
-        SceneManager.LoadScene("Main");
+        selectLightPanel.SetActive(true);
     }
 
     private void OpenOptionPanel()
