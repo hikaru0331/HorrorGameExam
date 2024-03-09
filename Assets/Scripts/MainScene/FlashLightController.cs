@@ -7,11 +7,14 @@ public class FlashLightController : MonoBehaviour
 {
     [SerializeField] private Transform cameraTransform;
     private Light lightComponent;
+    ScoreManager scoreManager;
 
     private void Start() 
     {
         lightComponent = this.GetComponent<Light>();
-        SetLightBrightness(GradeCalculater.lightSpotAngle);
+        scoreManager = GameObject.FindWithTag("ScoreManager").GetComponent<ScoreManager>();
+
+        lightComponent.spotAngle = scoreManager.GetLightStrength();
     }
 
     public void SetLightBrightness(float spotAngle)

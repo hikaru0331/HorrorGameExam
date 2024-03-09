@@ -11,6 +11,8 @@ public class SelectLightPanelManager : MonoBehaviour
     [SerializeField] private Button strongLightButton;
     [SerializeField] private Button backButton;
 
+    ScoreManager scoreManager;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -18,26 +20,25 @@ public class SelectLightPanelManager : MonoBehaviour
         normalLightButton.onClick.AddListener(SetNormalLight);
         strongLightButton.onClick.AddListener(SetStrongLight);
         backButton.onClick.AddListener(CloseSelectLightPanel);
+
+        scoreManager = GameObject.FindWithTag("ScoreManager").GetComponent<ScoreManager>();
     }
 
     private void SetPenLight()
     {
-        GradeCalculater.lightSpotAngle = 20.0f;        
-        Debug.Log(GradeCalculater.lightSpotAngle);
+        scoreManager.UpdateLightStrength(20.0f);
         SceneManager.LoadScene("Main");
     }
 
     private void SetNormalLight()
     {
-        GradeCalculater.lightSpotAngle = 40.0f;
-        Debug.Log(GradeCalculater.lightSpotAngle);
+        scoreManager.UpdateLightStrength(40.0f);
         SceneManager.LoadScene("Main");
     }
 
     private void SetStrongLight()
     {
-        GradeCalculater.lightSpotAngle = 60.0f;
-        Debug.Log(GradeCalculater.lightSpotAngle);
+        scoreManager.UpdateLightStrength(60.0f);
         SceneManager.LoadScene("Main");
     }
 
