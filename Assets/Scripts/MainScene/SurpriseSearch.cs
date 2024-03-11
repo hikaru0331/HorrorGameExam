@@ -8,6 +8,13 @@ public class SurpriseSearch : MonoBehaviour
 {
     List<GameObject> surpriseMarkers = new List<GameObject>();
 
+    ScoreManager scoreManager;
+
+    private void Start()
+    {
+        scoreManager = GameObject.FindWithTag("ScoreManager").GetComponent<ScoreManager>();
+    }
+
     private void OnTriggerEnter(Collider other) 
     {
         if (other.gameObject.CompareTag("SurpriseMarker"))
@@ -25,6 +32,9 @@ public class SurpriseSearch : MonoBehaviour
             {
                 addedMarkers.GetComponent<MeshRenderer>().enabled = true;
             }
+
+        scoreManager.AddSearchTimes(1);
+            
         }
     }
 

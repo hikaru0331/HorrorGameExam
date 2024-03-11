@@ -6,6 +6,7 @@ TagManager:
   tags:
   - CinemachineTarget
   - SurpriseMarker
+  - ScoreManager
   layers:
   - Default
   - TransparentFX

@@ -8,12 +8,21 @@ public class GradeDisplayer : MonoBehaviour
     private int grade;
     [SerializeField] private TextMeshProUGUI resultText; 
 
+    ScoreManager scoreManager;
+
     // Start is called before the first frame update
     void Start()
     {
+        scoreManager = GameObject.FindWithTag("ScoreManager").GetComponent<ScoreManager>();
         GradeCalculater gradeCalculater = new GradeCalculater();
-        grade = gradeCalculater.GradeCalculate();
+
+        Debug.Log("ライトの強さ" + scoreManager.GetLightStrength());
+        Debug.Log("サーチ回数" + scoreManager.GetSearchTimes());
+        Debug.Log("クリア時間" + scoreManager.GetClearTime());
+        grade = gradeCalculater.GradeCalculate(scoreManager.GetLightStrength(), scoreManager.GetSearchTimes(), scoreManager.GetClearTime());
 
         resultText.text = "Your grade is " + grade.ToString() + ".";
+
+        scoreManager.ResetAllValues();
     }
 }
