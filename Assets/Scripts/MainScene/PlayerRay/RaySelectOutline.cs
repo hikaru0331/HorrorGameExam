@@ -15,7 +15,7 @@ public class SelectRayOutline : IPlayerSelectRayReceive
 
     [SerializeField] private GameObject checkText;
 
-    void Start()
+    protected void Start()
     {
         GetMaterials();
 
