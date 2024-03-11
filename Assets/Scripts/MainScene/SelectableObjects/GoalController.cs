@@ -21,6 +21,8 @@ public class GoalController : SelectRayOutline
             {
                 SceneManager.LoadScene("Result");
                 KeyContainer.hasKey = false;
+
+                Cursor.lockState = CursorLockMode.None;
                 Cursor.visible = true;
             }
             else
