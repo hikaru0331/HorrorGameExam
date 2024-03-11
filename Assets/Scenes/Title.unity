@@ -629,7 +629,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 373113399}
-  - component: {fileID: 373113401}
   - component: {fileID: 373113402}
   m_Layer: 0
   m_Name: UIManager
@@ -653,23 +652,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &373113401
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 373113398}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ecad7a191ffd8b6478b77619bf5daac6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  startButton: {fileID: 625311537}
-  optionButton: {fileID: 1535540507}
-  exitButton: {fileID: 139602001}
-  selectLightPanel: {fileID: 0}
-  optionPanel: {fileID: 464300380}
 --- !u!114 &373113402
 MonoBehaviour:
   m_ObjectHideFlags: 0

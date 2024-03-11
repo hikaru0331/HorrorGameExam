@@ -304,6 +304,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 670224703}
+  - component: {fileID: 670224704}
   m_Layer: 0
   m_Name: ClearTimeCounter
   m_TagString: Untagged
@@ -326,6 +327,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &670224704
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 670224702}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9bc844f6f5366134d865a7eadc267d1a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &775462697
 GameObject:
   m_ObjectHideFlags: 0
@@ -1654,7 +1667,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8301540281746961496, guid: 838e7d56d2f1a4e46ad51d985ee65632, type: 3}
       propertyPath: m_TagString
-      value: ScoraManager
+      value: ScoreManager
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

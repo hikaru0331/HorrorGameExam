@@ -12,7 +12,15 @@ public class ScoreManager : Singleton<ScoreManager>
     void Start()
     {
         lightStrength = new LightStrength();
-        searchTimes = new SearchTimes();        
+        searchTimes = new SearchTimes();
+        clearTime = new ClearTime();
+    }
+
+    public void ResetAllValues()
+    {
+        lightStrength.ResetLightStrength();
+        searchTimes.ResetSearchTimes();
+        clearTime.ResetCleraTime();
     }
 
     //ライトの強さに関するメソッド
@@ -24,38 +32,24 @@ public class ScoreManager : Singleton<ScoreManager>
     {
         return lightStrength.GetLightStrength();
     }
-    public void ResetLightStrength()
-    {
-        lightStrength.ResetLightStrength();
-    }
 
     //びっくりサーチの使用回数に関するメソッド
     public void AddSearchTimes(int addSearchValue)
     {
         searchTimes.AddSearchTimes(addSearchValue);
     }
-    public float GetSearchTimes()
+    public int GetSearchTimes()
     {
         return searchTimes.GetSearchTimes();
     }
-    public void ResetAllValues()
-    {
-        searchTimes.ResetSearchTimes();
-    }
 
     //クリアタイムに関するメソッド
-    public float GetClearTime() 
-    {
-        return clearTime.GetClearTime();
-    }
-
-  public void UpdateClearTime(float time) 
+    public void UpdateClearTime(float time) 
     {
         clearTime.UpdateClearTime(time);
     }
-
-  public void ResetCleraTime()
+    public float GetClearTime() 
     {
-        clearTime.ResetCleraTime();
+        return clearTime.GetClearTime();
     }
 }
