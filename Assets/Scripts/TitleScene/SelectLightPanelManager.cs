@@ -26,19 +26,19 @@ public class SelectLightPanelManager : MonoBehaviour
 
     private void SetPenLight()
     {
-        scoreManager.UpdateLightStrength(20.0f);
+        scoreManager.UpdateLightStrength(40.0f);
         SceneManager.LoadScene("Main");
     }
 
     private void SetNormalLight()
     {
-        scoreManager.UpdateLightStrength(40.0f);
+        scoreManager.UpdateLightStrength(60.0f);
         SceneManager.LoadScene("Main");
     }
 
     private void SetStrongLight()
     {
-        scoreManager.UpdateLightStrength(60.0f);
+        scoreManager.UpdateLightStrength(80.0f);
         SceneManager.LoadScene("Main");
     }
 
