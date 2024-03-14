@@ -21,7 +21,7 @@ public class GradeDisplayer : MonoBehaviour
         Debug.Log("クリア時間" + scoreManager.GetClearTime());
         grade = gradeCalculater.GradeCalculate(scoreManager.GetLightStrength(), scoreManager.GetSearchTimes(), scoreManager.GetClearTime());
 
-        resultText.text = "Your grade is " + grade.ToString() + ".";
+        resultText.text = "あなたの検定結果は" + grade.ToString() + "級です";
 
         scoreManager.ResetAllValues();
     }
