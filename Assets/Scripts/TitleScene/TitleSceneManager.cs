@@ -9,7 +9,7 @@ public class TitleSceneManager : MonoBehaviour
     [SerializeField] private Button optionButton;
     [SerializeField] private Button exitButton;
 
-    [SerializeField] private GameObject selectLightPanel;
+    [SerializeField] private GameObject howToPlayCheckPanel;
     [SerializeField] private GameObject optionPanel;
     
 
@@ -23,7 +23,7 @@ public class TitleSceneManager : MonoBehaviour
 
     private void OpenSelectLightPanel()
     {
-        selectLightPanel.SetActive(true);
+        howToPlayCheckPanel.SetActive(true);
     }
 
     private void OpenOptionPanel()
