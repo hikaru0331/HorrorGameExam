@@ -3154,10 +3154,10 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1313026920}
   - {fileID: 625311536}
   - {fileID: 1535540506}
   - {fileID: 139602000}
-  - {fileID: 1313026920}
   - {fileID: 1490411004}
   - {fileID: 1077179540}
   - {fileID: 642888203}
@@ -6229,7 +6229,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u30B9\u30DA\u30FC\u30B9\u30AD\u30FC\u3067\u3073\u3063\u304F\u308A\u30B5\u30FC\u30C1\u304C\u884C\u306A\u3048\u307E\u3059"
+  m_text: "\u30B9\u30DA\u30FC\u30B9\u30AD\u30FC\u3067\u3073\u3063\u304F\u308A\u30B5\u30FC\u30C1\u304C\u884C\u3048\u307E\u3059"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e6c01e92e01ba7c48b0a54d0d665c220, type: 2}
   m_sharedMaterial: {fileID: 5754013884419539791, guid: e6c01e92e01ba7c48b0a54d0d665c220, type: 2}
