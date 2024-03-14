@@ -281,10 +281,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Result Text
+  m_text: "\u30EA\u30B6\u30EB\u30C8"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: e6c01e92e01ba7c48b0a54d0d665c220, type: 2}
+  m_sharedMaterial: {fileID: 5754013884419539791, guid: e6c01e92e01ba7c48b0a54d0d665c220, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
