@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class GradeCalculater
 {    
+    private int minute = 60;
+
     public int GradeCalculate(float lightStrength, int searchTimes, float clearTime) 
     {
         float calcResult = lightStrength + ((float)searchTimes * 10) + clearTime;
@@ -17,15 +19,15 @@ public class GradeCalculater
     {
         int grade = 4;
 
-        if(calcResult < 100)
+        if(calcResult < minute * 3)
         {
             grade = 1;
         }
-        else if(calcResult < 200)
+        else if(calcResult < minute * 5)
         {
             grade = 2;
         }
-        else if(calcResult < 300)
+        else if(calcResult < minute * 7)
         {
             grade = 3;
         }
