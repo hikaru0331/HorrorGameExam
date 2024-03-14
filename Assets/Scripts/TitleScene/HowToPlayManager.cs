@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -9,6 +10,8 @@ public class HowToPlayManager : MonoBehaviour
     [SerializeField] private Button backButton;
     [SerializeField] private GameObject[] howToPlayPanels;
     [SerializeField] private GameObject selectLightPanel;
+
+    [SerializeField] private TextMeshProUGUI pageText;
 
     private int activeHTPNumber = 0;
 
@@ -21,6 +24,8 @@ public class HowToPlayManager : MonoBehaviour
         nextButton.onClick.AddListener(OpenNextHTP);
         backButton.onClick.AddListener(OpenPostHTP);
 
+        pageText.text = (activeHTPNumber + 1) + " / " + howToPlayPanels.Length;
+
         maxHTP = howToPlayPanels.Length - 1;
     }
 
@@ -30,6 +35,8 @@ public class HowToPlayManager : MonoBehaviour
         {
             activeHTPNumber++;
             howToPlayPanels[activeHTPNumber].SetActive(true);
+
+            pageText.text = (activeHTPNumber + 1) + " / " + howToPlayPanels.Length;
         }
         else
         {
@@ -43,6 +50,8 @@ public class HowToPlayManager : MonoBehaviour
         {
             howToPlayPanels[activeHTPNumber].SetActive(false);
             activeHTPNumber--;
+
+            pageText.text = (activeHTPNumber + 1) + " / " + howToPlayPanels.Length;
         }
         else
         {
