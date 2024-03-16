@@ -10,12 +10,18 @@ public class SpiderGenerater : MonoBehaviour
 
     GameObject player;
 
+    [SerializeField] private AudioClip walkSpiderSound;
+    AudioSource audioSource;
+
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.FindWithTag("Player");
         StartCoroutine(GenerateSpiders());
         Destroy(this.gameObject, waitSeconds * generateSpidersCount);
+
+        audioSource = GetComponent<AudioSource>();
+        audioSource.PlayOneShot(walkSpiderSound);
     }
 
     IEnumerator GenerateSpiders()

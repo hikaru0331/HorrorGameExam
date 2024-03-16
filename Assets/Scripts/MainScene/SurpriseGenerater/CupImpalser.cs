@@ -8,10 +8,16 @@ public class CupImpalser : MonoBehaviour
 
     private int randomNumber;
 
+    [SerializeField] private AudioClip crackingSound;
+    AudioSource audioSource;
+
     // Start is called before the first frame update
     void Start()
     {        
         gameObjects = GameObject.FindGameObjectsWithTag("Cup");
+
+        audioSource = GetComponent<AudioSource>();
+        audioSource.PlayOneShot(crackingSound);
 
         for (int i = 0; i < gameObjects.Length; i++)
         {
@@ -19,7 +25,7 @@ public class CupImpalser : MonoBehaviour
             gameObjects[i].GetComponent<Rigidbody>().AddForce(randomNumber, randomNumber * 10, randomNumber);
         }  
 
-        Destroy(this.gameObject);
+        Destroy(this.gameObject, 1.0f);
     }
 
 }
