@@ -27,6 +27,10 @@ public class GradeDisplayer : MonoBehaviour
 
     public static bool canLoadTitleScene = false;
 
+    AudioSource audioSource;
+    [SerializeField] private AudioClip otherSound;
+    [SerializeField] private AudioClip gradeSound;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -75,6 +79,8 @@ public class GradeDisplayer : MonoBehaviour
         searchTimesText.text = "サーチ回数：" + scoreManager.GetSearchTimes().ToString() + "回";
         clearTimeText.text = "クリア時間：" + scoreManager.GetClearTime().ToString("f2") + "秒";
 
+        audioSource = GetComponent<AudioSource>();
+
         StartCoroutine(DisplayTexts());
 
         scoreManager.ResetAllValues();
@@ -83,16 +89,20 @@ public class GradeDisplayer : MonoBehaviour
     IEnumerator DisplayTexts()
     {
         lightStrengthTextObj.SetActive(true);
+        audioSource.PlayOneShot(otherSound);
         yield return new WaitForSeconds(waitSecond);
 
         searchTimesTextObj.SetActive(true);
+        audioSource.PlayOneShot(otherSound);
         yield return new WaitForSeconds(waitSecond);
 
         clearTimeTextObj.SetActive(true);
+        audioSource.PlayOneShot(otherSound);
         yield return new WaitForSeconds(waitSecond);
 
         gradeTextObj.SetActive(true);
         gradeMetaphorTextObj.SetActive(true);
+        audioSource.PlayOneShot(gradeSound);
         
         canLoadTitleScene = true;
     }
