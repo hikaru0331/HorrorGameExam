@@ -4,8 +4,9 @@ using UnityEngine;
  
 public class RandomMovement : MonoBehaviour
 {
-    private float chargeTime = 1.0f;
+    private float interval = 0.5f;
     private float timeCount;
+    [SerializeField] private float speed = 2.0f;
  
     private void Start() 
     {
@@ -17,10 +18,10 @@ public class RandomMovement : MonoBehaviour
         timeCount += Time.deltaTime;
  
         // 自動前進
-        transform.position += -transform.forward * Time.deltaTime;
+        transform.position += -transform.forward * speed * Time.deltaTime;
  
         // 指定時間の経過（条件）
-        if(timeCount > chargeTime)
+        if(timeCount > interval)
         {
             // 進路をランダムに変更する
             Vector3 course = new Vector3(0, Random.Range(0, 180), 0);
