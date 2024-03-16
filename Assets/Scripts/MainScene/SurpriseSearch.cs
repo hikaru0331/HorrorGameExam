@@ -3,6 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using DG.Tweening;
+using Microsoft.Unity.VisualStudio.Editor;
 
 public class SurpriseSearch : MonoBehaviour
 {
@@ -12,6 +14,8 @@ public class SurpriseSearch : MonoBehaviour
 
     [SerializeField] private AudioClip searchSound;
     AudioSource audioSource;
+
+    [SerializeField] private CanvasGroup searchPanel;
 
     private void Start()
     {
@@ -36,6 +40,8 @@ public class SurpriseSearch : MonoBehaviour
             {
                 addedMarkers.GetComponent<MeshRenderer>().enabled = true;
                 audioSource.PlayOneShot(searchSound);
+                
+                searchPanel.DOFade(1.0f, 1.0f).OnComplete(() => searchPanel.DOFade(0.0f, 1.0f));
             }
 
         scoreManager.AddSearchTimes(1);
