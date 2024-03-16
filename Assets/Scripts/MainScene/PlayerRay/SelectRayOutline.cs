@@ -57,9 +57,9 @@ public class SelectRayOutline : IPlayerSelectRayReceive
         checkText.SetActive(false);
     }
 
-    void SwitchOutline(bool isEenable)
+    void SwitchOutline(bool isEnable)
     {
-        if (isEenable)
+        if (isEnable)
         {
             if (outline.OutlineMode != Outline.Mode.OutlineAll)
             {
