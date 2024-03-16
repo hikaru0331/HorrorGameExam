@@ -18,10 +18,10 @@ public class RandomSurpriseGenerater : SelectRayOutline
 
         randomNumber = Random.Range(0, surprises.Length);
 
-        if(canInstantiate)
+        /*if(canInstantiate)
         {
             transform.GetChild(0).gameObject.SetActive(true);
-        }
+        }*/
     }
 
     private bool ReturnRandomBool()
