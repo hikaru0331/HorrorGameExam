@@ -8,6 +8,7 @@ TagManager:
   - SurpriseMarker
   - ScoreManager
   - Cup
+  - ElectroPanel
   layers:
   - Default
   - TransparentFX

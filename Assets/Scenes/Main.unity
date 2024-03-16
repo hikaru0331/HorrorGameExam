@@ -4493,7 +4493,8 @@ MonoBehaviour:
   outlineColor: {r: 0, g: 1, b: 1, a: 1}
   checkText: {fileID: 1819828967}
   nothingText: {fileID: 1919099772}
-  surprises: []
+  surprises:
+  - {fileID: 6152827312237357451, guid: e348d8af94d8c6a449b4a857f7c9b42c, type: 3}
 --- !u!114 &1133271970
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5113,6 +5114,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ElectroPanel2
       objectReference: {fileID: 0}
+    - target: {fileID: 125360, guid: 516fd0d5b53125c48abf9d5a06873180, type: 3}
+      propertyPath: m_TagString
+      value: ElectroPanel
+      objectReference: {fileID: 0}
     - target: {fileID: 474866, guid: 516fd0d5b53125c48abf9d5a06873180, type: 3}
       propertyPath: m_RootOrder
       value: 9
@@ -5206,7 +5211,8 @@ MonoBehaviour:
   outlineColor: {r: 0, g: 1, b: 1, a: 1}
   checkText: {fileID: 1819828967}
   nothingText: {fileID: 1919099772}
-  surprises: []
+  surprises:
+  - {fileID: 6152827312237357451, guid: e348d8af94d8c6a449b4a857f7c9b42c, type: 3}
 --- !u!1 &1278109008 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 6468c9a8e17142b4ca0f0ec3570361ee, type: 3}
@@ -5423,7 +5429,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1315332615
 Transform:
   m_ObjectHideFlags: 0
@@ -10606,6 +10612,10 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 125360, guid: 516fd0d5b53125c48abf9d5a06873180, type: 3}
       propertyPath: m_Name
+      value: ElectroPanel
+      objectReference: {fileID: 0}
+    - target: {fileID: 125360, guid: 516fd0d5b53125c48abf9d5a06873180, type: 3}
+      propertyPath: m_TagString
       value: ElectroPanel
       objectReference: {fileID: 0}
     - target: {fileID: 474866, guid: 516fd0d5b53125c48abf9d5a06873180, type: 3}

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CupImpalser : MonoBehaviour
 {
-    private GameObject[] gameObjects;
+    private GameObject[] cups;
 
     private int randomNumber;
 
@@ -14,15 +14,15 @@ public class CupImpalser : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {        
-        gameObjects = GameObject.FindGameObjectsWithTag("Cup");
+        cups = GameObject.FindGameObjectsWithTag("Cup");
 
         audioSource = GetComponent<AudioSource>();
         audioSource.PlayOneShot(crackingSound);
 
-        for (int i = 0; i < gameObjects.Length; i++)
+        for (int i = 0; i < cups.Length; i++)
         {
             randomNumber = Random.Range(10, 31);
-            gameObjects[i].GetComponent<Rigidbody>().AddForce(randomNumber, randomNumber * 10, randomNumber);
+            cups[i].GetComponent<Rigidbody>().AddForce(randomNumber, randomNumber * 10, randomNumber);
         }  
 
         Destroy(this.gameObject, 1.0f);
