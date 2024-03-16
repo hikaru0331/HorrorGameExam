@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11f8cd413ca1bf140a6622e9c9ac1b20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  knockSound: {fileID: 8300000, guid: de47f941dc1ef9943a9081cd0e3e8e1d, type: 3}
+  knockSound: {fileID: 8300000, guid: 3fa4c2ee3598a5741bc2f8283f4f7504, type: 3}
 --- !u!82 &2616611079104173020
 AudioSource:
   m_ObjectHideFlags: 0

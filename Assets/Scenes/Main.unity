@@ -2642,8 +2642,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.44068024, y: 0.35685804, z: 0.32870525}
-  m_Center: {x: 0.038378675, y: -0.000756694, z: 0.16435258}
+  m_Size: {x: 0.44068024, y: 0.35685804, z: 0.30776107}
+  m_Center: {x: 0.038378682, y: -0.00075669563, z: 0.17482468}
 --- !u!114 &690046958
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8554,8 +8554,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.89991534, y: 0.6545245, z: 0.667115}
-  m_Center: {x: 0.076197065, y: -0.019668866, z: 0.12176571}
+  m_Size: {x: 0.320912, y: 0.33336705, z: 0.3967597}
+  m_Center: {x: 0.011617932, y: 0.003964851, z: 0.17549108}
 --- !u!114 &2031704950
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8682,6 +8682,22 @@ PrefabInstance:
       propertyPath: nothingText
       value: 
       objectReference: {fileID: 1919099772}
+    - target: {fileID: 6371686393270848012, guid: 7e00b420d123b944b9365009b3dfd075, type: 3}
+      propertyPath: m_Size.z
+      value: 0.324826
+      objectReference: {fileID: 0}
+    - target: {fileID: 6371686393270848012, guid: 7e00b420d123b944b9365009b3dfd075, type: 3}
+      propertyPath: m_Center.x
+      value: 0.038378686
+      objectReference: {fileID: 0}
+    - target: {fileID: 6371686393270848012, guid: 7e00b420d123b944b9365009b3dfd075, type: 3}
+      propertyPath: m_Center.y
+      value: -0.00075660646
+      objectReference: {fileID: 0}
+    - target: {fileID: 6371686393270848012, guid: 7e00b420d123b944b9365009b3dfd075, type: 3}
+      propertyPath: m_Center.z
+      value: 0.16629207
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -11486,6 +11502,22 @@ PrefabInstance:
       propertyPath: nothingText
       value: 
       objectReference: {fileID: 1919099772}
+    - target: {fileID: 6371686393270848012, guid: 7e00b420d123b944b9365009b3dfd075, type: 3}
+      propertyPath: m_Size.z
+      value: 0.3109851
+      objectReference: {fileID: 0}
+    - target: {fileID: 6371686393270848012, guid: 7e00b420d123b944b9365009b3dfd075, type: 3}
+      propertyPath: m_Center.x
+      value: 0.038378686
+      objectReference: {fileID: 0}
+    - target: {fileID: 6371686393270848012, guid: 7e00b420d123b944b9365009b3dfd075, type: 3}
+      propertyPath: m_Center.y
+      value: -0.00075660646
+      objectReference: {fileID: 0}
+    - target: {fileID: 6371686393270848012, guid: 7e00b420d123b944b9365009b3dfd075, type: 3}
+      propertyPath: m_Center.z
+      value: 0.17321253
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
