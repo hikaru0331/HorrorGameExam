@@ -9,6 +9,7 @@ TagManager:
   - ScoreManager
   - Cup
   - ElectroPanel
+  - Cart
   layers:
   - Default
   - TransparentFX
