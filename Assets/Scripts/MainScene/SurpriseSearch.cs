@@ -10,9 +10,13 @@ public class SurpriseSearch : MonoBehaviour
 
     ScoreManager scoreManager;
 
+    [SerializeField] private AudioClip searchSound;
+    AudioSource audioSource;
+
     private void Start()
     {
         scoreManager = GameObject.FindWithTag("ScoreManager").GetComponent<ScoreManager>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     private void OnTriggerEnter(Collider other) 
@@ -31,6 +35,7 @@ public class SurpriseSearch : MonoBehaviour
             foreach (GameObject addedMarkers in surpriseMarkers)
             {
                 addedMarkers.GetComponent<MeshRenderer>().enabled = true;
+                audioSource.PlayOneShot(searchSound);
             }
 
         scoreManager.AddSearchTimes(1);
