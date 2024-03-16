@@ -9,11 +9,14 @@ public class RandomSurpriseGenerater : SelectRayOutline
     [SerializeField] private GameObject[] surprises;
 
     private bool canInstantiate;
+    private int randomNumber;
 
     private void Start() 
     {        
         base.Start();
         canInstantiate = ReturnRandomBool();
+
+        randomNumber = Random.Range(0, surprises.Length);
 
         if(canInstantiate)
         {
@@ -32,7 +35,7 @@ public class RandomSurpriseGenerater : SelectRayOutline
 
         if(Input.GetMouseButtonDown(0) && canInstantiate)
         {
-            Instantiate(surprises[Random.Range(0, surprises.Length)]);
+            Instantiate(surprises[randomNumber]);
         }
         else if(Input.GetMouseButtonDown(0) && !canInstantiate)
         {
