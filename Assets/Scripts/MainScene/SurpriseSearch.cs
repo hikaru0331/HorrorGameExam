@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using DG.Tweening;
-using Microsoft.Unity.VisualStudio.Editor;
 
 public class SurpriseSearch : MonoBehaviour
 {
